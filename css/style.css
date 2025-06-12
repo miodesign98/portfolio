@@ -1062,6 +1062,7 @@ body {
   padding: 1rem 1.5rem;
   border-radius: 3rem;
   text-transform: capitalize;
+  cursor: pointer;
 }
 @media screen and (max-width: 1000px) {
   .section02 .inner .title .menu li,
