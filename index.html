@@ -192,36 +192,43 @@
             let mainVisual = document.querySelector('.main_visual');
             let section01 = document.querySelector('.section01');
             let section02 = document.querySelector('.section02');
-            let section03 = document.querySelector('.section03');
-            let footer = document.querySelector('.footer');
-
             let aboutMenu = document.querySelector('.header .gnb > li.about');
             let workMenu = document.querySelector('.header .gnb > li.work');
             let contactMenu = document.querySelector('.header .gnb > li.contact');
+
+            // 현재 스크롤 정보
+            let scrollY = window.scrollY;
+            let scrollBottom = scrollY + window.innerHeight;
+            let documentHeight = document.body.scrollHeight;
+
 
             aboutMenu.classList.remove('active');
             workMenu.classList.remove('active');
             contactMenu.classList.remove('active');
 
-            let scrollY = window.scrollY;
 
-            // main_visual의 높이(= 화면 높이)보다 더 내려오면 효과 적용
+            // header 기본 active (main_visual 지나가면 active)
             if (scrollY > mainVisual.offsetHeight - 80) {
                 headerLi.classList.add('active');
             } else {
                 headerLi.classList.remove('active');
-            };
-            // 현재 스크롤 위치에 따라 active 적용
-            if (scrollY >= scrollY >= section01.offsetTop) {
-                aboutMenu.classList.add('active');
-            } else if (scrollY >= section02.offsetTop - 80) {
-                workMenu.classList.add('active');
-                aboutMenu.classList.remove('active');
-            } else if (scrollY >= footer.offsetTop) {
-                workMenu.classList.remove('active');
-                contactMenu.classList.add('active');
             }
 
+            // 메뉴별 active 처리 (우선순위: contact > work > about)
+            if (scrollBottom >= documentHeight - 10) {
+                // 맨 아래까지 도달
+                contactMenu.classList.add('active');
+                aboutMenu.classList.remove('active');
+                workMenu.classList.remove('active');
+            } else if (scrollY >= section02.offsetTop - 80) {
+                workMenu.classList.add('active');
+                contactMenu.classList.remove('active');
+                aboutMenu.classList.remove('active');
+            } else if (scrollY >= section01.offsetTop) {
+                workMenu.classList.remove('active');
+                contactMenu.classList.remove('active');
+                aboutMenu.classList.add('active');
+            }
         });
 
 
@@ -2110,22 +2117,27 @@
 
         <footer class="section footer">
             <div class="inner">
-                <div class="title">
-                    <h2>you can <br>connect me</h2>
-                    <p class="line">you can <br>connect me</p>
-                </div>
-                <ul class="text">
-                    <li>
-                        <img src="img/call_yellow.png" alt="call">
-                        <p>010.7760.8281</p>
-                    </li>
-                    <li>
-                        <img src="img/email_yellow.png" alt="call">
-                        <p>chleodbs061@gmail.com</p>
-                    </li>
-                </ul>
-
+                    <div class="title">
+                        <h2>you can <br>contact me</h2>
+                        <p class="line">you can <br>contact me</p>
+                    </div>
+                    <ul class="text">
+                        <li>
+                            <img src="img/call_yellow.png" alt="call">
+                            <p>010.7760.8281</p>
+                        </li>
+                        <li>
+                            <img src="img/email_yellow.png" alt="call">
+                            <p>chleodbs061@gmail.com</p>
+                        </li>
+                    </ul>
+               
             </div><!-- inner -->
+ <div class="mini">
+                    <p>해당 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.</p>
+                    <p>© 2025 Kim suhyeon. All Rights Reserved.</p>
+                </div>
+
         </footer>
 
     </div><!-- wrap -->

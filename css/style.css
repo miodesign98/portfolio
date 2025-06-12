@@ -1686,7 +1686,8 @@ body {
   bottom: -0.5rem;
   right: -0.5rem;
   color: transparent;
-  -webkit-text-stroke: 1px #FFD800;  display: inline-block;
+  -webkit-text-stroke: 1px #FFD800;
+  display: inline-block;
 }
 @media screen and (max-width: 800px) {
   .footer .inner .title .line {
@@ -1724,6 +1725,17 @@ body {
   .footer .inner ul li p {
     font-size: 2rem;
   }
+}
+.footer .mini {
+  margin: 3rem auto;
+  font-size: 1.6rem;
+  font-family: "Pretendard";
+  font-weight: 300;
+  text-align: center;
+  border-top: 1px solid #FBFBFB;
+  color: #FBFBFB;
+  padding: 3rem 0;
+  line-height: 2.08rem;
 }
 
 @keyframes slideWord {

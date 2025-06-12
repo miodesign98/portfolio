@@ -1576,9 +1576,10 @@ body {
                         font-size: 1.6rem;
                         gap: 1rem;
                         margin-bottom: 1rem;
+
                         @media screen and (max-width:450px) {
-                        width: 100%;
-                    }
+                            width: 100%;
+                        }
                     }
                 }
             }
@@ -1675,9 +1676,10 @@ body {
         #bi {
             .item {
                 width: 30%;
+
                 @media screen and (max-width:500px) {
-                       width: 48%;
-                    }
+                    width: 48%;
+                }
 
                 .client {
                     position: absolute;
@@ -1731,11 +1733,14 @@ body {
         align-items: flex-end;
         gap: 5rem;
         color: #FBFBFB;
+
         @media screen and (max-width: 500px) {
-                    flex-direction: column;
-                    align-items: flex-start;
-                    gap: 3rem;
-                }
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 3rem;
+        }
+
+
 
         .title {
             position: relative;
@@ -1747,6 +1752,7 @@ body {
                 font-size: 7rem;
                 text-transform: capitalize;
                 z-index: 10;
+
                 @media screen and (max-width: 800px) {
                     font-size: 5rem;
                 }
@@ -1764,7 +1770,8 @@ body {
                 color: transparent;
                 -webkit-text-stroke: 1px #FFD800;
                 display: inline-block;
-                                @media screen and (max-width: 800px) {
+
+                @media screen and (max-width: 800px) {
                     font-size: 5rem;
                 }
             }
@@ -1777,29 +1784,45 @@ body {
                 display: flex;
                 align-items: center;
                 gap: 3rem;
-                 @media screen and (max-width: 800px) {
+
+                @media screen and (max-width: 800px) {
                     height: 5rem;
-                   gap: 2rem;
+                    gap: 2rem;
                 }
 
                 img {
                     width: 35px;
                     object-fit: contain;
-                                    @media screen and (max-width: 800px) {
-                    width: 28px;
-                }
+
+                    @media screen and (max-width: 800px) {
+                        width: 28px;
+                    }
                 }
 
                 p {
                     font-size: 3rem;
                     font-family: 'Pretendard';
                     font-weight: 500;
-                                    @media screen and (max-width: 800px) {
-                    font-size: 2rem;
-                }
+
+                    @media screen and (max-width: 800px) {
+                        font-size: 2rem;
+                    }
                 }
             }
+
         }
+    }
+
+    .mini {
+        margin: 3rem auto;
+        font-size: 1.6rem;
+        font-family: 'Pretendard';
+        font-weight: 300;
+        text-align: center;
+        border-top:1px solid #FBFBFB;
+        color: #FBFBFB;
+        padding: 3rem 0;
+        line-height: 2.08rem;
     }
 }
 
